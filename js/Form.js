@@ -22,6 +22,7 @@ class Form {
       this.input.hide();
       this.button.hide();
       player.name = this.input.value();
+      gameState = 1;
     });
 
    

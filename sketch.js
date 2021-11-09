@@ -4,10 +4,13 @@ var gameState = 0;
 
 var form, player, game;
 
-var ninja;
+var ninja, ninjaImg, enemyNinjaImg;
+
 
 function preload(){
   backgroundImage = loadImage("images/village-1.jpg")
+  ninjaImg = loadAnimation("images/ninja.png")
+  enemyNinjaImg = loadAnimation("images/enemy_ninja.png")
 }
 
 function setup(){

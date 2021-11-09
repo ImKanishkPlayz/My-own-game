@@ -12,26 +12,24 @@ class Game {
       form = new Form()
       form.display();
     }
-    ninja = createSprite(280, 400);
+    ninja = createSprite(280, 630);
+    ninja.addAnimation("forward", ninjaImg);
+    ninja.addAnimation("backward", enemyNinjaImg);
+    ninja.scale = 0.5;
   }
 
   play(){
     form.hide();
-    
-    if(keyIsDown(UP_ARROW)){
-      ninja.x + 1
-    }
-
-    if(keyIsDown(DOWN_ARROW)){
-      ninja.x - 1
-    }
+    background(backgroundImage);
 
     if(keyIsDown(LEFT_ARROW)){
-      ninja.y + 1
+      ninja.x = ninja.x - 6
+      ninja.changeAnimation("backward", enemyNinjaImg);
     }
 
     if(keyIsDown(RIGHT_ARROW)){
-      ninja.y - 1
+      ninja.x = ninja.x + 6
+      ninja.changeAnimation("forward", ninjaImg);
     }
    
     drawSprites();
