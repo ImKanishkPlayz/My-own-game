@@ -12,7 +12,7 @@ class Game {
       form = new Form()
       form.display();
     }
-    ninja = createSprite(280, 630);
+    ninja = createSprite(280, height - 210);
     ninja.addAnimation("forward", ninjaImg);
     ninja.addAnimation("backward", enemyNinjaImg);
     ninja.scale = 0.5;
